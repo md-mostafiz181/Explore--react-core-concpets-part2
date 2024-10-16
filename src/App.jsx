@@ -1,7 +1,11 @@
 
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+
+  const [count,setCount]=useState(0)
 
 
   function button1 (){
@@ -16,6 +20,16 @@ function App() {
  const button4 =(num)=>{
   alert(num + 5)
  }
+
+  const handleAdd =()=>{
+      const newCount = count + 1 ;
+      setCount(newCount)
+  }
+
+  const handleReduce =()=>{
+    const newCount = count - 1 ;
+    setCount(newCount)
+  }
   return (
     <>
 
@@ -24,6 +38,11 @@ function App() {
       <button onClick={button2}>Button 2</button>
       <button onClick={ ()=> alert("button3 is clicked")}>Button 3</button>
       <button onClick={()=>button4(5)}>Button 4</button>
+
+      <h1>Count : {count} </h1>
+
+      <button onClick={handleAdd}>Add</button>
+      <button onClick={handleReduce}>Reduce</button>
       
     </>
   )
