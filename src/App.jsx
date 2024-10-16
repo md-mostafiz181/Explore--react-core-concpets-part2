@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './App.css'
+import Team from './Team'
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
 
       <button onClick={handleAdd}>Add</button>
       <button onClick={handleReduce}>Reduce</button>
+
+      <Team></Team>
       
     </>
   )
