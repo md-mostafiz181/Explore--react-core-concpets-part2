@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import Team from './Team'
+import Users from './Users'
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       <button onClick={handleReduce}>Reduce</button>
 
       <Team></Team>
+      <Users></Users>
       
     </>
   )
